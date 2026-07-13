@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070b14"/>
+      <stop offset="0.55" stop-color="#05070d"/>
+      <stop offset="1" stop-color="#080a12"/>
+    </linearGradient>
+    <radialGradient id="violet" cx="0.82" cy="0.35" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyan" cx="0.1" cy="0.9" r="0.55">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <rect width="1584" height="396" fill="url(#violet)"/>
+  <rect width="1584" height="396" fill="url(#cyan)"/>
+
+  <!-- faint signal nodes on the right -->
+  <g opacity="0.5" stroke="#a78bfa" stroke-opacity="0.35" fill="none" stroke-width="1.5">
+    <circle cx="1300" cy="150" r="46"/>
+    <circle cx="1300" cy="150" r="86"/>
+    <circle cx="1300" cy="150" r="130"/>
+  </g>
+  <circle cx="1300" cy="150" r="6" fill="#a78bfa"/>
+  <circle cx="1216" cy="230" r="4" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="1386" cy="96" r="3.5" fill="#34d399" opacity="0.8"/>
+
+  <!-- content -->
+  <text x="120" y="150" font-family="JetBrains Mono" font-weight="500" font-size="21"
+        letter-spacing="5" fill="#22d3ee">AI-POWERED CTV ADVERTISING</text>
+  <text x="116" y="252" font-family="Space Grotesk" font-weight="700" font-size="104"
+        letter-spacing="-3"><tspan fill="#ffffff">Urbani</tspan><tspan fill="#a78bfa">.tv</tspan></text>
+  <text x="120" y="318" font-family="Inter" font-weight="400" font-size="30"
+        fill="#aab4c8">Get more from your CTV media spend.</text>
+</svg>

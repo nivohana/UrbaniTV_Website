@@ -1,26 +1,213 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* Surfaces */
+  --color-night-950: #05070d;
+  --color-night-900: #070b14;
+  --color-night-800: #0b1120;
+  --color-night-700: #101828;
+
+  /* Accents — decorative (glows, gradients, text accents) */
+  --color-glow-cyan: #22d3ee;
+  --color-glow-violet: #a78bfa;
+  --color-glow-green: #34d399;
+
+  /* Accents — chart marks, validated against the dark surface */
+  --color-chart-cyan: #0891b2;
+  --color-chart-violet: #8b5cf6;
+  --color-chart-green: #059669;
+  --color-chart-amber: #d97706;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-night-950);
+  color: #e6eaf2;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: #f2f6ff;
+}
+
+/* ---------- Reusable surface + text treatments ---------- */
+
+.glass {
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-deep {
+  background: linear-gradient(
+    160deg,
+    rgba(13, 20, 36, 0.92),
+    rgba(7, 11, 20, 0.88)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.text-gradient {
+  background: linear-gradient(96deg, #f2f6ff 20%, #8fd7ea 58%, #b3a2f7 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-glow-cyan);
+}
+
+/* Faint blueprint grid used behind sections */
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 78%);
+}
+
+/* Hairline divider with a soft glow at the center */
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34, 211, 238, 0.35) 50%,
+    transparent
+  );
+}
+
+/* ---------- Marquee (logo strip) ---------- */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 42s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee 48s linear infinite reverse;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+
+/* ---------- Live indicator ---------- */
+
+@keyframes live-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+  }
+  60% {
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--color-glow-green);
+  animation: live-pulse 2.2s ease-out infinite;
+}
+
+/* ---------- Animated sweep along flow connectors ---------- */
+
+@keyframes line-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(350%);
+  }
+}
+
+.animate-line-sweep {
+  animation: line-sweep 4.5s ease-in-out infinite;
+}
+
+@keyframes line-sweep-y {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(350%);
+  }
+}
+
+.animate-line-sweep-y {
+  animation: line-sweep-y 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-line-sweep,
+  .animate-line-sweep-y,
+  .live-dot {
+    animation: none;
+  }
+}
+
+/* Accessible focus */
+:focus-visible {
+  outline: 2px solid var(--color-glow-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
