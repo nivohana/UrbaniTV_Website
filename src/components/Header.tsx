@@ -31,7 +31,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-14 md:h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <Link
-          href="#top"
+          href="/#top"
           className="font-display text-xl font-bold tracking-tight text-white"
           aria-label="Urbani, back to top"
         >

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import BidstreamCanvas from "./BidstreamCanvas";
+import HeroShowcase from "./HeroShowcase";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
@@ -20,7 +21,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-svh items-end overflow-hidden"
+      className="relative isolate flex min-h-svh flex-col justify-start overflow-hidden pt-28 pb-16 md:pt-32 md:pb-20"
     >
       <Image
         src="/images/hero-film.jpg"
@@ -36,20 +37,12 @@ export default function Hero() {
         aria-hidden="true"
       />
 
-      {/* Giant decorative wordmark sweeping across the image, se7en-style */}
-      <motion.div
-        aria-hidden="true"
-        initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.4, delay: 0.2, ease: [0.21, 0.6, 0.35, 1] }}
-        className="pointer-events-none absolute inset-x-0 top-[24%] flex justify-center px-[6vw] sm:top-[20%]"
-      >
-        <p className="text-gradient inline-block pr-[0.15em] font-display text-[14vw] font-bold leading-none tracking-tight opacity-80 sm:text-[12vw]">
-          Urbani<span className="align-super text-[0.22em]">™</span>
-        </p>
-      </motion.div>
+      {/* CTV screen cluster with data popping up — the Urbani decision, live */}
+      <div className="relative z-10 mx-auto w-full max-w-5xl px-5 md:px-8">
+        <HeroShowcase />
+      </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-3xl px-5 pb-20 text-center md:px-8 md:pb-24">
+      <div className="relative z-10 mx-auto mt-12 w-full max-w-3xl px-5 text-center md:mt-16 md:px-8">
         <motion.h1
           {...entrance(0.35)}
           className="font-display text-3xl font-semibold leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -57,7 +50,7 @@ export default function Hero() {
           Every impression, optimized by AI. Seen by real people.
         </motion.h1>
 
-        <motion.div {...entrance(0.5)} className="mt-10">
+        <motion.div {...entrance(0.5)} className="mt-8 md:mt-10">
           <Link
             href="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-night-950 transition-transform duration-300 hover:scale-[1.04]"
