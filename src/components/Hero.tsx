@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import BidstreamCanvas from "./BidstreamCanvas";
 
@@ -57,8 +58,8 @@ export default function Hero() {
         </motion.h1>
 
         <motion.div {...entrance(0.5)} className="mt-10">
-          <a
-            href="#technology"
+          <Link
+            href="/contact"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-night-950 transition-transform duration-300 hover:scale-[1.04]"
           >
             Meet Urbani™
@@ -68,7 +69,7 @@ export default function Hero() {
             >
               →
             </span>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

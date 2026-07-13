@@ -8,11 +8,13 @@ import { useCallback, useEffect, useState } from "react";
  * (client-directed reference). The big heading + author block sit fixed on
  * fixed on the left; the company logo + quote crossfade on the right.
  *
- * NOTE — real clients: Playmania (Eldar) and Hyprmode (Guy). Quote wording is
- * illustrative placeholder copy, to be replaced with client-approved
- * testimonials before launch. Slide 3 is a full placeholder pending the third
- * client. Playmania mark from playmania.io; Hyprmode has no fetchable logo yet
- * (hyprmode.gg did not resolve) so it renders as a text wordmark. */
+ * NOTE — real clients: Playmania (Eldar), Hyprmode (Guy) and Yellow River
+ * (Kelly Lobato, yellowriverd.com). Quote wording is illustrative placeholder
+ * copy, to be replaced with client-approved testimonials before launch.
+ * Playmania mark from playmania.io; Yellow River mark rebuilt as an SVG from
+ * the site's brand (gold serif "Y", #EBC65A on #100F0C) since no logo file is
+ * fetchable; Hyprmode has no fetchable logo yet (hyprmode.gg did not resolve)
+ * so it renders as a text wordmark. */
 type Testimonial = {
   quote: string;
   headline: string;
@@ -42,10 +44,11 @@ const TESTIMONIALS: Testimonial[] = [
       "Urbani™ optimizes in real time, so completion rates and ROAS keep climbing without us touching a dial. It feels like having a media team that never sleeps.",
   },
   {
-    // Placeholder — replace with the third client's real testimonial.
-    company: "Northbeam",
-    name: "Maya Levin",
-    role: "Media Director, Northbeam",
+    // Quote wording is illustrative placeholder copy pending Kelly's approval.
+    company: "Yellow River",
+    logo: "/testimonials/yellow-river.svg",
+    name: "Kelly Lobato",
+    role: "Monetization Manager, Yellow River",
     headline: "We stopped guessing and started scaling.",
     quote:
       "The intelligence behind every placement is what sets Urbani™ apart. We see where our media goes and why, and the results speak for themselves.",

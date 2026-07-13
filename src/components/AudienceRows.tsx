@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./ui/Reveal";
 
 const PANELS = [
@@ -83,8 +84,8 @@ export default function AudienceRows() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="group mt-9 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-glow-cyan"
                 >
                   {panel.cta}
@@ -94,7 +95,7 @@ export default function AudienceRows() {
                   >
                     →
                   </span>
-                </a>
+                </Link>
               </Reveal>
             </div>
           </div>

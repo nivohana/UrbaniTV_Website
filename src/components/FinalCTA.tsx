@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./ui/Reveal";
 
 // TODO: replace with the verified contact address before launch.
@@ -34,15 +35,15 @@ export default function FinalCTA() {
 
         <Reveal delay={0.15}>
           <div className="mt-12">
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
+            <Link
+              href="/contact"
               className="group inline-flex items-center gap-2.5 rounded-full bg-white px-9 py-4 text-base font-semibold text-night-950 transition-transform duration-300 hover:scale-[1.04]"
             >
               Let&rsquo;s Get Started
               <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./ui/Reveal";
 
 export default function Publishers() {
@@ -24,8 +25,8 @@ export default function Publishers() {
                   every impression with the most relevant demand opportunity.
                   Delivering curated media packages designed for better result.
                 </p>
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="group mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-cyan-100"
                 >
                   Let&rsquo;s talk
@@ -35,7 +36,7 @@ export default function Publishers() {
                   >
                     →
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 

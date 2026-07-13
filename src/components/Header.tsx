@@ -51,12 +51,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-night-950 transition-transform duration-300 hover:scale-[1.04]"
           >
             Let&rsquo;s Talk
-          </a>
+          </Link>
 
           <button
             type="button"
@@ -100,13 +100,13 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 inline-flex items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-night-950"
               >
                 Let&rsquo;s Talk
-              </a>
+              </Link>
             </div>
           </motion.nav>
         )}
