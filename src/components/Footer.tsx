@@ -39,8 +39,9 @@ export default function Footer() {
               Urbani<span className="text-glow-violet">.tv</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
-            Urbani™ is an AI-powered CTV layer that connects publishers and advertisers through smarter real-time decisioning, matching every impression with the right demand, audience, and opportunity.
-            </p>
+            Urbani™ is an AI-powered CTV layer that connects publishers and advertisers
+            through smarter real-time decisioning, matching every impression with the right demand.
+          </p>
             <p className="mt-6 text-xs leading-relaxed text-slate-600">
             Building A1, Dubai Digital Park
             <br />

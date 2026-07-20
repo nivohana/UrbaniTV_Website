@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import LogoStrip from "@/components/LogoStrip";
 import AudienceRows from "@/components/AudienceRows";
 import Engine from "@/components/Engine";
 import Publishers from "@/components/Publishers";
@@ -17,7 +16,6 @@ export default function Home() {
         <Hero />
         <Engine />
         <AudienceRows />
-        <LogoStrip />
         <Publishers />
         <PlatformStrip />
         <Testimonials />

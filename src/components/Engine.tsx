@@ -59,9 +59,8 @@ export default function Engine() {
           <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-400">
             Meet Urbani™ is our AI-powered CTV decisioning engine, built to
             analyze every request in real time and route traffic to the most
-            relevant demand. By matching the right ad opportunity with the
-            right audience signal, Urbani helps reduce waste, improve
-            performance, and unlock smarter outcomes across every campaign.
+            relevant demand By matching the right ad to the right platform.
+            Urbani helps reduce waste, improve performance, and unlock smarter outcomes across every campaign.
           </p>
         </Reveal>
 
