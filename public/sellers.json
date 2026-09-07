@@ -28,12 +28,6 @@
       "seller_type": "PUBLISHER"
     },
     {
-      "seller_id": "30114",
-      "name": "Zeam",
-      "domain": "zeam.com",
-      "seller_type": "PUBLISHER"
-    },
-    {
       "seller_id": "30116",
       "name": "Adprime",
       "domain": "adprime.com",
@@ -47,8 +41,8 @@
     },
     {
       "seller_id": "30118",
-      "name": "Thrivestate",
-      "domain": "thrivestate.co.il",
+      "name": "Pubrev+",
+      "domain": "pubrevplus.com",
       "seller_type": "PUBLISHER"
     },
     {
@@ -56,6 +50,30 @@
       "name": "Verve",
       "domain": "Verve.com",
       "seller_type": "INTERMEDIARY"
+    },
+    {
+      "seller_id": "30120",
+      "name": "FuboTV",
+      "domain": "fubo.tv",
+      "seller_type": "PUBLISHER"
+    },
+    {
+      "seller_id": "30121",
+      "name": "Sling",
+      "domain": "sling.com",
+      "seller_type": "PUBLISHER"
+    },
+    {
+      "seller_id": "30122",
+      "name": "Xumo",
+      "domain": "xumo.com",
+      "seller_type": "PUBLISHER"
+    },
+    {
+      "seller_id": "30122",
+      "name": "FutureToday",
+      "domain": "futuretodayinc.com",
+      "seller_type": "PUBLISHER"
     }
   ]
 }
